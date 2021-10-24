@@ -7,14 +7,15 @@ import com.enigmacamp.daggercourseapplication.repository.model.Engine
 import com.enigmacamp.daggercourseapplication.repository.model.GasolineEngine
 import dagger.Binds
 import dagger.Module
+import dagger.Provides
 
 @Module
-abstract class EngineModule {
-    @Binds
+class EngineModule constructor(private val capacity: Int) {
+    @Provides
     @GasolineType
-    abstract fun bindsGasolineEngine(gasolineEngine: GasolineEngine): Engine
+    fun providesGasolineEngine(): Engine = GasolineEngine(capacity)
 
-    @Binds
+    @Provides
     @DieselType
-    abstract fun bindsDieselEngine(dieselEngine: DieselEngine): Engine
+    fun providesDieselEngine(): Engine = DieselEngine(capacity)
 }
