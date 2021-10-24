@@ -1,6 +1,8 @@
 package com.enigmacamp.daggercourseapplication.repository.model
 
-class DieselEngine : Engine {
+import javax.inject.Inject
+
+class DieselEngine @Inject constructor() : Engine {
     override val engineName = "Diesel Engine"
 
     override fun startEngine() = "$engineName Started"

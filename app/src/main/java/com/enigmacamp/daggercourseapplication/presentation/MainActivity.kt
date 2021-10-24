@@ -3,7 +3,7 @@ package com.enigmacamp.daggercourseapplication.presentation
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.enigmacamp.daggercourseapplication.R
-import com.enigmacamp.daggercourseapplication.appContainer
+import com.enigmacamp.daggercourseapplication.di.DaggerVehicleComponent
 import com.enigmacamp.daggercourseapplication.repository.model.Car
 
 class MainActivity : AppCompatActivity() {
@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        myCar = appContainer.myCar
+        myCar = DaggerVehicleComponent.create().car()
         myCar.run()
         myCar.parking()
     }

@@ -1,8 +1,9 @@
 package com.enigmacamp.daggercourseapplication.repository.model
 
 import android.util.Log
+import javax.inject.Inject
 
-class Car(private val engine: GasolineEngine) {
+class Car @Inject constructor(private val engine: GasolineEngine) {
     fun run() {
         Log.d("CarDI", "run: ${engine.startEngine()}")
     }
