@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        DaggerVehicleComponent.builder().engineModule(EngineModule(1500)).build().inject(this)
+        DaggerVehicleComponent.builder().engineCapacity(2000).build().inject(this)
         myNewCar.run()
         myNewCar.parking()
     }

@@ -10,12 +10,12 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class EngineModule constructor(private val capacity: Int) {
+class EngineModule {
     @Provides
     @GasolineType
-    fun providesGasolineEngine(): Engine = GasolineEngine(capacity)
+    fun providesGasolineEngine(capacity: Int): Engine = GasolineEngine(capacity)
 
     @Provides
     @DieselType
-    fun providesDieselEngine(): Engine = DieselEngine(capacity)
+    fun providesDieselEngine(capacity: Int): Engine = DieselEngine(capacity)
 }
