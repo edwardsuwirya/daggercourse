@@ -17,7 +17,7 @@ class SalesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sales)
-        salesComponent = vehicleComponent.salesComponent()
+        salesComponent = vehicleComponent.salesComponentFactory().create(10)
         salesComponent.inject(this)
         val result = carSales.saleCar()
         Log.d("CarDI", "onCreate-Sales: $result")

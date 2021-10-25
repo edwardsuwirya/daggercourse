@@ -12,7 +12,7 @@ interface VehicleComponent {
     fun inject(mainActivity: MainActivity)
     fun inject(nextActivity: NextActivity)
 
-    fun salesComponent(): SalesComponent
+    fun salesComponentFactory(): SalesComponent.Factory
 
     @Component.Builder
     interface Builder {
