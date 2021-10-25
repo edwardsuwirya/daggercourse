@@ -14,6 +14,10 @@ class SalesActivity : AppCompatActivity() {
 
     @Inject
     lateinit var carSales: CarSales
+
+    @Inject
+    lateinit var brands: List<String>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sales)
@@ -21,5 +25,6 @@ class SalesActivity : AppCompatActivity() {
         salesComponent.inject(this)
         val result = carSales.saleCar()
         Log.d("CarDI", "onCreate-Sales: $result")
+        Log.d("CarDI", "onCreate-Sales: $brands")
     }
 }

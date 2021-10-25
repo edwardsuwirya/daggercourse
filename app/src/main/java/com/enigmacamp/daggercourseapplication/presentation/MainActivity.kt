@@ -18,12 +18,17 @@ class MainActivity : AppCompatActivity() {
 
     @Inject
     lateinit var myNewCar: Vehicle
+
+    @Inject
+    lateinit var brands: List<String>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         vehicleComponent.inject(this)
         Log.d("CarDI", "onCreate-Main: $myNewCar")
+        Log.d("CarDI", "onCreate-Main: $brands")
 
         with(binding) {
             nextButton.setOnClickListener {
