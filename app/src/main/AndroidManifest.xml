@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DaggerCourseApplication">
-        <activity android:name=".presentation.NextActivity"></activity>
+        <activity android:name=".presentation.SalesActivity"></activity>
+        <activity android:name=".presentation.NextActivity" />
         <activity android:name=".presentation.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

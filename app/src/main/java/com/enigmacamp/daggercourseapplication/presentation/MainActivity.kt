@@ -29,11 +29,19 @@ class MainActivity : AppCompatActivity() {
             nextButton.setOnClickListener {
                 goToNext()
             }
+            carSalesButton.setOnClickListener {
+                goToSales()
+            }
         }
     }
 
     private fun goToNext() {
         val intent = Intent(this, NextActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun goToSales() {
+        val intent = Intent(this, SalesActivity::class.java)
         startActivity(intent)
     }
 }

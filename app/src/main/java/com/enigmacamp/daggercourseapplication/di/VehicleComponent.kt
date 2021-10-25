@@ -12,6 +12,8 @@ interface VehicleComponent {
     fun inject(mainActivity: MainActivity)
     fun inject(nextActivity: NextActivity)
 
+    fun salesComponent(): SalesComponent
+
     @Component.Builder
     interface Builder {
         @BindsInstance
