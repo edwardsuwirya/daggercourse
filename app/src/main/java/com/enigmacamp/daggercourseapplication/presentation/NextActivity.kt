@@ -6,6 +6,7 @@ import android.util.Log
 import com.enigmacamp.daggercourseapplication.R
 import com.enigmacamp.daggercourseapplication.di.DaggerVehicleComponent
 import com.enigmacamp.daggercourseapplication.repository.model.Vehicle
+import com.enigmacamp.daggercourseapplication.vehicleComponent
 import javax.inject.Inject
 
 class NextActivity : AppCompatActivity() {
@@ -15,7 +16,7 @@ class NextActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_next)
-        DaggerVehicleComponent.builder().engineCapacity(2000).build().inject(this)
+        vehicleComponent.inject(this)
         Log.d("CarDI", "onCreate-Next: $myNewCar")
     }
 }

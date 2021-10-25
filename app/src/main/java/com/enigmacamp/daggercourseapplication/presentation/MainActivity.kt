@@ -10,6 +10,7 @@ import com.enigmacamp.daggercourseapplication.di.DaggerVehicleComponent
 import com.enigmacamp.daggercourseapplication.di.EngineModule
 import com.enigmacamp.daggercourseapplication.repository.model.Car
 import com.enigmacamp.daggercourseapplication.repository.model.Vehicle
+import com.enigmacamp.daggercourseapplication.vehicleComponent
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        DaggerVehicleComponent.builder().engineCapacity(2000).build().inject(this)
+        vehicleComponent.inject(this)
         Log.d("CarDI", "onCreate-Main: $myNewCar")
 
         with(binding) {
