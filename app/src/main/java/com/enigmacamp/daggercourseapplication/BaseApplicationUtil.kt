@@ -6,8 +6,3 @@ import com.enigmacamp.daggercourseapplication.di.VehicleComponent
 fun Activity.baseApplication(): BaseApplication {
     return application as BaseApplication
 }
-
-val Activity.vehicleComponent: VehicleComponent
-    get() {
-        return baseApplication().vehicleComponent
-    }
