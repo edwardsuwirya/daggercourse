@@ -7,9 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import com.enigmacamp.daggercourseapplication.databinding.ActivityMainBinding
 import com.enigmacamp.daggercourseapplication.repository.model.Vehicle
 import dagger.android.AndroidInjection
+import dagger.android.DaggerActivity
+import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : DaggerActivity() {
     private lateinit var binding: ActivityMainBinding
 
     @Inject
@@ -19,7 +21,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var brands: List<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

@@ -7,6 +7,7 @@ import com.enigmacamp.daggercourseapplication.presentation.NextActivity
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
+import dagger.android.AndroidInjector
 import javax.inject.Singleton
 
 @Component(
@@ -14,9 +15,7 @@ import javax.inject.Singleton
     dependencies = [BrandComponent::class]
 )
 @Singleton
-interface VehicleComponent {
-    fun inject(application: BaseApplication)
-
+interface VehicleComponent: AndroidInjector<BaseApplication> {
     @Component.Builder
     interface Builder {
         @BindsInstance
