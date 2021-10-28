@@ -1,5 +1,6 @@
 package com.enigmacamp.daggercourseapplication.presentation
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.enigmacamp.daggercourseapplication.R
@@ -18,7 +19,7 @@ class SalesActivity : DaggerActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sales)
         val result = carSales.saleCar()
-        Log.d("CarDI", "onCreate-Sales: $result")
+        Log.d("CarDI", "onCreate-Sales: $carSales")
         Log.d("CarDI", "onCreate-Sales: $brands")
     }
 }

@@ -15,7 +15,7 @@ abstract class ActivitiesModule {
     @ContributesAndroidInjector
     abstract fun contributeNextActivity(): NextActivity
 
-    @ContributesAndroidInjector(modules = [SalesModule::class])
+    @ContributesAndroidInjector(modules = [SalesModule::class, SalesActivityFragmentModule::class])
     @ActivityScope
     abstract fun contributeSalesActivity(): SalesActivity
 }
