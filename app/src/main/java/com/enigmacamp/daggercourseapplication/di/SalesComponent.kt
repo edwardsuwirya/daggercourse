@@ -6,6 +6,7 @@ import dagger.Subcomponent
 
 @ActivityScope
 @Subcomponent(modules = [SalesModule::class])
+//@Subcomponent
 interface SalesComponent {
     fun inject(salesActivity: SalesActivity)
 }
