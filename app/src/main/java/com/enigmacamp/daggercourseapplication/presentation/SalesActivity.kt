@@ -1,14 +1,13 @@
 package com.enigmacamp.daggercourseapplication.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.enigmacamp.daggercourseapplication.R
 import com.enigmacamp.daggercourseapplication.repository.model.CarSales
-import dagger.android.DaggerActivity
+import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
-class SalesActivity : DaggerActivity() {
+class SalesActivity : DaggerAppCompatActivity() {
     @Inject
     lateinit var carSales: CarSales
 

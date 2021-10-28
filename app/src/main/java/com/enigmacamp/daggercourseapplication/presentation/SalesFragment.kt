@@ -10,9 +10,10 @@ import android.view.ViewGroup
 import com.enigmacamp.daggercourseapplication.R
 import com.enigmacamp.daggercourseapplication.repository.model.CarSales
 import dagger.android.support.AndroidSupportInjection
+import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 
-class SalesFragment : Fragment() {
+class SalesFragment : DaggerFragment() {
     @Inject
     lateinit var carSales: CarSales
     override fun onAttach(context: Context) {
