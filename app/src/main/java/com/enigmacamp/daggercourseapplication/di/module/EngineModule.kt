@@ -1,11 +1,10 @@
-package com.enigmacamp.daggercourseapplication.di
+package com.enigmacamp.daggercourseapplication.di.module
 
 import com.enigmacamp.daggercourseapplication.di.annotation.DieselType
 import com.enigmacamp.daggercourseapplication.di.annotation.GasolineType
 import com.enigmacamp.daggercourseapplication.repository.model.DieselEngine
 import com.enigmacamp.daggercourseapplication.repository.model.Engine
 import com.enigmacamp.daggercourseapplication.repository.model.GasolineEngine
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 

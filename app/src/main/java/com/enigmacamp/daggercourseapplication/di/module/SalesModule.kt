@@ -1,4 +1,4 @@
-package com.enigmacamp.daggercourseapplication.di
+package com.enigmacamp.daggercourseapplication.di.module
 
 import com.enigmacamp.daggercourseapplication.di.annotation.ActivityScope
 import com.enigmacamp.daggercourseapplication.repository.model.CarSales

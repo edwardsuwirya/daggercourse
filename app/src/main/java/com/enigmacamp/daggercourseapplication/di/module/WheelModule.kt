@@ -1,4 +1,4 @@
-package com.enigmacamp.daggercourseapplication.di
+package com.enigmacamp.daggercourseapplication.di.module
 
 import com.enigmacamp.library.RubberWheelImpl
 import com.enigmacamp.library.Wheels

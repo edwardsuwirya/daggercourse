@@ -4,8 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.enigmacamp.daggercourseapplication.R
-import com.enigmacamp.daggercourseapplication.di.SalesComponent
+import com.enigmacamp.daggercourseapplication.di.component.SalesComponent
 import com.enigmacamp.daggercourseapplication.repository.model.CarSales
+import com.enigmacamp.daggercourseapplication.repository.model.Vehicle
 import com.enigmacamp.daggercourseapplication.vehicleComponent
 import javax.inject.Inject
 
@@ -14,6 +15,10 @@ class SalesActivity : AppCompatActivity() {
 
     @Inject
     lateinit var carSales: CarSales
+
+    @Inject
+    lateinit var myNewCar: Vehicle
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sales)
@@ -21,5 +26,6 @@ class SalesActivity : AppCompatActivity() {
         salesComponent.inject(this)
         val result = carSales.saleCar()
         Log.d("CarDI", "onCreate-Sales: $result")
+        Log.d("CarDI", "onCreate-Sales: $myNewCar")
     }
 }

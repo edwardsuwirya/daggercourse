@@ -1,7 +1,7 @@
 package com.enigmacamp.daggercourseapplication
 
 import android.app.Activity
-import com.enigmacamp.daggercourseapplication.di.VehicleComponent
+import com.enigmacamp.daggercourseapplication.di.component.VehicleComponent
 
 fun Activity.baseApplication(): BaseApplication {
     return application as BaseApplication

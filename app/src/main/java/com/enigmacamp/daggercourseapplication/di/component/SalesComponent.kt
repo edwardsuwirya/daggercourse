@@ -1,5 +1,6 @@
-package com.enigmacamp.daggercourseapplication.di
+package com.enigmacamp.daggercourseapplication.di.component
 
+import com.enigmacamp.daggercourseapplication.di.module.SalesModule
 import com.enigmacamp.daggercourseapplication.di.annotation.ActivityScope
 import com.enigmacamp.daggercourseapplication.presentation.SalesActivity
 import dagger.Subcomponent
