@@ -17,7 +17,6 @@ class SalesFragment : DaggerFragment() {
     @Inject
     lateinit var carSales: CarSales
     override fun onAttach(context: Context) {
-        AndroidSupportInjection.inject(this)
         super.onAttach(context)
         Log.d("CarDI", "onCreate-Sales: $carSales")
     }
